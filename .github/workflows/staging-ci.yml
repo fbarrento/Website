@@ -51,8 +51,5 @@ jobs:
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
 
-      - name: List apps
-        run: doctl apps list
-
       - name: Create Deployment on Digitalocean
-        run: doctl apps create-deployment 87775717-3ce2-495d-8f53-ce44fe6dc527
+        run: doctl apps create-deployment $ {{ secrets.DIGITALOCEAN_STSAGING_APP_ID }}
