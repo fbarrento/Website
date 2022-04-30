@@ -3,7 +3,7 @@ name: staging-ci
 on:
   push:
     branches:
-      - staging
+      - dev
   pull_request:
     branches:
       - staging
@@ -50,4 +50,3 @@ jobs:
         uses: digitalocean/action-doctl@v2
         with:
           token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
-
