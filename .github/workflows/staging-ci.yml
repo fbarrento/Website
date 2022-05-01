@@ -46,6 +46,15 @@ jobs:
       - name: Run linter 👀
         run: yarn lint
 
+  cd:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
       - name: Install doctl
         uses: digitalocean/action-doctl@v2
         with:
