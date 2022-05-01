@@ -47,6 +47,7 @@ jobs:
         run: yarn lint
 
   cd:
+    needs: ci
     runs-on: ${{ matrix.os }}
 
     strategy:
